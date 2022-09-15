@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="indext.css">
+</head>
+<body>
+    <script>
+        var song = new Audio('Nightcore - Baby I Love You ♥ (320  kbps).mp3');
+        function setAlarm() 
+        {
+            var hours = hh.value;
+            var min = mm.value;
+            var secs = ss.value;
+            n = new Date();
+            if(hours == n.getHours() && min == n.getMinutes())
+            {
+                // alert("wake up")
+                song.play()
+                
+            }
+            setTimeout("setAlarm()",1000);
+            
+        }
+        function hey() 
+        {
+            alert('solve this question')
+            var wake = prompt('Do you want to get up now')
+            if (wake == 1){
+                alert('Wake now')
+                location.reload() 
+            }else{[]
+                alert('Rest in Peace')
+            }
+        }
+
+    </script>
+    <table align="center" style="background-color: rgba(77, 7, 143, 0.747); padding-top: 50px; border-radius: 5px;">
+        <tr>
+            <td colspan="3" align="center" style="font-size: xx-large; font-family: sans-serif; padding-bottom: 50px;color: rgb(68, 5, 68);"><b>ALARM SYSTEM</b></td>
+        </tr>
+        <tr>
+            <td><input type="number" placeholder="hours" id="hh">:</td>
+            <td><input type="number" placeholder="min" id="mm">:</td>
+            <td><input type="number" placeholder="secs" id="ss"></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center" style="padding-top: 50px;"><button onclick="setAlarm()">Set Alarm</button></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><button onclick="hey()">Hey</button></td>
+        </tr>
+        
+
+        
+
+    </table>
+</body>
+</html>
